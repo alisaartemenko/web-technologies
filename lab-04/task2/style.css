@@ -1,0 +1,47 @@
+/* ---------- Селектори тегів ---------- */
+body {
+    text-align: center;                 /* вирівнювання тексту по центру */
+}
+
+h2 {
+    font-style: italic;                 /* курсив */
+}
+
+hr {
+    width: 60%;
+    height: 8px;
+    border: none;
+    background-color: green;            /* зелена лінія товщиною 8px */
+}
+
+/* ---------- Ідентифікатори ---------- */
+#title {
+    color: red;                         /* червоний заголовок */
+}
+
+#footer-text {
+    font-family: "Courier New", monospace;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* ---------- Класи ---------- */
+.name {
+    font-weight: bold;                  /* назва продукту жирним */
+}
+
+.note {
+    font-size: smaller;                 /* дрібніший шрифт для кількості */
+}
+
+.underline {
+    text-decoration: underline;         /* підкреслення */
+}
+
+.strike {
+    text-decoration: line-through;      /* перекреслення */
+}
+
+.highlight {
+    background-color: yellow;           /* виділення жовтим кольором */
+}

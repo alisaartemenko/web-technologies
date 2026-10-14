@@ -1,0 +1,50 @@
+/* 1. Універсальний селектор: для всього контенту сторінки */
+* {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 40px;              /* інтервал між рядками тексту */
+}
+
+/* 2. Селектори тегів */
+p {
+    color: green;
+    text-align: center;
+}
+
+div {
+    text-align: justify;
+}
+
+/* 3. Клас: червоний колір для 1-го та 3-го абзаців */
+.red-text {
+    color: red;
+}
+
+/* 4. Клас: заборона перенесення рядка (весь текст в один рядок) */
+.no-wrap {
+    white-space: nowrap;
+}
+
+/* 5. Ідентифікатор: 2-й абзац курсивом та жирним */
+#second-paragraph {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* 6. Клас: тінь тексту (2-й абзац та 2-й блок) */
+.shadow {
+    text-shadow: 5px -5px 3px #ff6666;
+}
+
+/* 7. Клас для 1-го блоку div */
+.first-block {
+    text-decoration: line-through;  /* перекреслений текст */
+    text-transform: uppercase;      /* верхній регістр */
+    text-indent: 50px;              /* відступ першого рядка */
+}
+
+/* 8. Клас для 2-го блоку div */
+.second-block {
+    letter-spacing: 30px;           /* інтервал між символами */
+    word-spacing: 50px;             /* інтервал між словами */
+}

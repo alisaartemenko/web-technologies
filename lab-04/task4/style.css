@@ -1,0 +1,70 @@
+/* 1. span у p з класом .text-background — курсив, жирність, підкреслення
+      (комбінатор нащадків: клас + тег) */
+.text-background span {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 2. span у .text-background, що знаходиться в div — жовтий фон
+      (комбінатор нащадків: тег + клас + тег) */
+div .text-background span {
+    background-color: yellow;
+}
+
+/* 3. span усередині іншого span — сірий фон, перекреслений текст
+      (комбінатор нащадків: два теги) */
+span span {
+    background-color: gray;
+    text-decoration: line-through;
+}
+
+/* 4. span у span, що знаходяться в нумерованому списку — 18px, верхній регістр
+      (комбінатор нащадків: три теги) */
+ol span span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* 5. Абзаци першого рівня вкладеності в section — тінь і відступ першого рядка
+      (комбінатор дочірнього елемента: два теги) */
+section > p {
+    text-shadow: 3px 3px 5px crimson;
+    text-indent: 50px;
+}
+
+/* 6. ul, що знаходиться безпосередньо в li — маркер-зображення
+      (комбінатор дочірнього елемента: два теги) */
+li > ul {
+    list-style-image: url("images/check.svg");
+}
+
+/* 7. Абзаци з класом .text-background першого рівня в div — інтервал між словами
+      (комбінатор дочірнього елемента: тег + клас) */
+div > .text-background {
+    word-spacing: 50px;
+}
+
+/* 8. Абзаци першого рівня в div з класом .text-bold — жирність
+      (комбінатор дочірнього елемента: клас + тег) */
+.text-bold > p {
+    font-weight: bold;
+}
+
+/* 9. Абзаци першого рівня в section, який є прямим нащадком div.text-bold — міжрядковий інтервал
+      (комбінатор дочірнього елемента: клас + два теги) */
+.text-bold > section > p {
+    line-height: 45px;
+}
+
+/* 10. Абзац, що йде відразу після img — коричневий фон
+       (комбінатор наступного сусіда: два теги) */
+img + p {
+    background-color: brown;
+}
+
+/* 11. Усі абзаци, що йдуть після section на тому ж рівні — червоний колір тексту
+       (комбінатор усіх наступних сусідів: два теги) */
+section ~ p {
+    color: red;
+}
