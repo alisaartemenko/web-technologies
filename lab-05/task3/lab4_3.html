@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Завдання 3. Анкета</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Анкета студента</h1>
+<form action="" method="get">
+<fieldset><legend>Особисті дані</legend>
+<p><label for="fn">Ім'я:</label> <input type="text" id="fn" name="first_name" placeholder="Ваше ім'я" required tabindex="1"></p>
+<p><label for="ln">Прізвище:</label> <input type="text" id="ln" name="last_name" placeholder="Ваше прізвище" required tabindex="2"></p>
+<p><label for="pw">Пароль:</label> <input type="password" id="pw" name="password" placeholder="6 символів: A-z, 0-9" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[A-Za-z\d]{6}" title="Рівно 6 символів: велика і мала літери та цифра" required tabindex="3"></p>
+<p><label for="em">Email:</label> <input type="email" id="em" name="email" placeholder="name@example.com" autocomplete="off" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}" title="Формат: name@example.com" required tabindex="4"></p>
+<p><label for="tel">Телефон:</label> <input type="tel" id="tel" name="phone" placeholder="+380XXXXXXXXX" pattern="\+380[0-9]{9}" title="Формат: +380XXXXXXXXX" tabindex="5"></p>
+<p><label for="bd">Дата народження:</label> <input type="date" id="bd" name="birth_date" tabindex="6"></p>
+<p><label for="about">Про себе:</label><br><textarea id="about" name="about" rows="4" cols="40" placeholder="Коротко розкажіть про себе" tabindex="7"></textarea></p>
+</fieldset>
+<fieldset><legend>Вподобання</legend>
+<p>Операційна система:
+<label><input type="radio" name="os" value="windows" tabindex="8"> Windows</label>
+<label><input type="radio" name="os" value="linux" tabindex="9"> Linux</label>
+<label><input type="radio" name="os" value="macos" tabindex="10"> macOS</label></p>
+<p>Формат навчання:
+<label><input type="radio" name="format" value="offline" tabindex="11"> Очно</label>
+<label><input type="radio" name="format" value="online" tabindex="12"> Дистанційно</label>
+<label><input type="radio" name="format" value="mixed" checked tabindex="13"> Змішано</label></p>
+<p>Напрями:
+<label><input type="checkbox" name="topics" value="frontend" tabindex="14"> Frontend</label>
+<label><input type="checkbox" name="topics" value="backend" tabindex="15"> Backend</label>
+<label><input type="checkbox" name="topics" value="design" tabindex="16"> Дизайн</label>
+<label><input type="checkbox" name="topics" value="qa" tabindex="17"> Тестування</label></p>
+</fieldset>
+<fieldset><legend>Списки</legend>
+<p><label for="lang">Мова програмування:</label>
+<select id="lang" name="language" tabindex="18"><option value="python">Python</option><option value="java">Java</option><option value="csharp" selected>C#</option><option value="js">JavaScript</option><option value="cpp">C++</option></select></p>
+<p><label for="tools">Інструменти (Ctrl + клік):</label><br>
+<select id="tools" name="tools" multiple size="6" tabindex="19"><option value="vscode">VS Code</option><option value="webstorm">WebStorm</option><option value="pycharm">PyCharm</option><option value="git">Git</option><option value="docker">Docker</option><option value="figma">Figma</option></select></p>
+<p><label for="tech">Технологія:</label>
+<select id="tech" name="technology" tabindex="20">
+<optgroup label="Frontend"><option value="html">HTML</option><option value="css">CSS</option><option value="js2">JavaScript</option></optgroup>
+<optgroup label="Backend"><option value="py">Python</option><option value="jv">Java</option><option value="php">PHP</option></optgroup>
+<optgroup label="Бази даних"><option value="mysql">MySQL</option><option value="pg">PostgreSQL</option><option value="mongo">MongoDB</option></optgroup>
+<optgroup label="Інструменти"><option value="git2">Git</option><option value="dock">Docker</option><option value="lin">Linux</option></optgroup>
+</select></p>
+<p><label for="city">Місто:</label> <input type="text" id="city" name="city" list="cities" placeholder="Почніть вводити" tabindex="21">
+<datalist id="cities"><option value="Київ"><option value="Львів"><option value="Одеса"><option value="Харків"><option value="Дніпро"></datalist></p>
+</fieldset>
+<fieldset><legend>Файли</legend>
+<p><label for="aud">Аудіо-файли:</label> <input type="file" id="aud" name="audio" accept="audio/*" multiple tabindex="22"></p>
+</fieldset>
+<button type="submit" name="send" value="get" tabindex="23">Надіслати (GET)</button>
+<button type="submit" name="send" value="post" formmethod="post" formenctype="multipart/form-data" tabindex="24">Надіслати (POST)</button>
+<button type="reset" name="clear" value="reset" tabindex="25">Очистити</button>
+</form>
+<p><a href="../index.html">Повернутись на головну</a></p>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+body {
+  text-align: center;
+  background-color: #eef3f8;
+  color: #1f2d3d;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+form {
+  display: inline-block;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+fieldset {
+  margin-bottom: 12px;
+  background-color: #f7fafd;
+}
+
+p {
+  margin: 8px 0;
+}
+
+
+h1 {
+  color: #1d4e89;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 2px #9db7d5;
+}
+
+
+legend {
+  background-color: #1d4e89;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+}
+
+label {
+  color: #2c4a6b;
+  font-weight: 600;
+}
+
+
+input,
+select,
+textarea {
+  background-color: #ffffff;
+  color: #1f2d3d;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8aa1b8;
+  font-style: italic;
+}
+
+optgroup {
+  font-style: italic;
+  color: #1d4e89;
+}
+
+
+button {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+button[type="submit"] {
+  background-color: #1d4e89;
+  color: #ffffff;
+}
+
+button[type="reset"] {
+  background-color: #d9e4ef;
+  color: #1d4e89;
+  text-decoration: underline;
+}
+
+
+a {
+  color: #1d4e89;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

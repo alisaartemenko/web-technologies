@@ -1,0 +1,117 @@
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1b2a41;
+  background-color: #1b2a41;
+  background-image: url("img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; 
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 900px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.85); 
+}
+
+header {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 40px;
+  border-bottom: 2px solid #1b2a41;
+}
+
+
+.tags div {
+  display: inline;
+  
+  width: 200px;
+  height: 100px;
+  padding: 4px 8px;
+  margin-right: 6px;
+  background-color: #ffcf8a;
+}
+
+.tags span {
+  display: block;
+
+  width: 150px;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background-color: #a8d5ff;
+}
+
+.repeat div {
+  height: 200px;
+  margin-bottom: 15px;
+  border: 1px solid #1b2a41;
+  background-color: #ffffff;
+  background-image: url("img/icon.png");
+}
+
+.repeat p {
+  margin: 0;
+  padding: 5px 10px;
+  display: inline-block;
+  background-color: rgba(27, 42, 65, 0.8);
+  color: #ffffff;
+}
+
+.repeat .repeat-x { background-repeat: repeat-x; }
+.repeat .repeat-y { background-repeat: repeat-y; }
+
+
+.repeat .space { background-repeat: space; }
+.repeat .round { background-repeat: round; }
+
+.size div {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 0 15px 15px 0;
+  border: 2px solid #1b2a41;
+  background-color: #dfe7f0;
+  background-image: url("img/photo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  vertical-align: top;
+}
+
+.size p {
+  margin: 0;
+  padding: 5px 10px;
+  display: inline-block;
+  background-color: rgba(27, 42, 65, 0.8);
+  color: #ffffff;
+}
+
+.size .contain { background-size: contain; } /* картинка видна повністю */
+.size .cover   { background-size: cover; }   /* блок заповнено, краї обрізано */
+
+
+.attachment div {
+  max-height: 150px;
+  overflow: auto;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  border: 2px solid #1b2a41;
+  background-image: url("img/texture.jpg");
+  background-size: 120px 120px;
+}
+
+.attachment .scroll { background-attachment: scroll; }
+.attachment .local  { background-attachment: local; }
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+}
