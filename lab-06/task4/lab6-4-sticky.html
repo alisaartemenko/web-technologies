@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk"><head><meta charset="utf-8"><title>Горизонтальна навігація (sticky)</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="nav.css"></head><body>
+<p style="margin:0;padding:40px 20px;background:#eee">Шапка сторінки (sticky-панель починається під нею)</p>
+<ul class="nav nav-h nav-h--sticky">
+  <li class="nav-item active"><a href="#"><i class="material-icons">home</i></a></li>
+  <li class="nav-item"><a href="#"><i class="material-icons">search</i></a>
+    <ul class="sub">
+      <li><a href="#">Пошук по сайту</a></li>
+      <li><a href="#">Розширений пошук</a>
+        <ul class="sub">
+          <li><a href="#">За датою</a></li>
+          <li><a href="#">За автором</a>
+            <ul class="sub"><li><a href="#">Студенти</a></li><li><a href="#">Викладачі</a></li></ul></li>
+        </ul></li>
+      <li><a href="#">Історія</a></li>
+    </ul></li>
+  <li class="nav-item"><a href="#"><i class="material-icons">settings</i></a>
+    <ul class="sub"><li><a href="#">Профіль</a></li><li><a href="#">Тема</a></li></ul></li>
+  <li class="nav-item"><a href="#"><i class="material-icons">mail</i></a>
+    <ul class="sub"><li><a href="#">Вхідні</a></li><li><a href="#">Надіслані</a></li></ul></li>
+</ul>
+<div class="content"><h1>Sticky-панель</h1><p>Прокрутіть сторінку: панель «прилипає» до верху після прокрутки. Останній пункт вирівняно праворуч через float.</p></div>
+</body></html>

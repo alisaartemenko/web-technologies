@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk"><head><meta charset="utf-8"><title>Завдання 2 — варіант 2</title>
+<style>
+*{box-sizing:border-box}
+.wrap{position:relative;width:560px;height:260px;margin:30px auto;font:16px Arial,sans-serif;color:#fff}
+.block{position:absolute;border:2px solid #222;text-align:center}
+.green{background:#00b050;height:40px;line-height:36px;width:130px}
+.blue{background:#548dd4;width:200px;height:260px;top:0;padding-top:20px;
+  opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.b11{left:0;bottom:0}
+.b21{left:150px}
+.b12{left:165px;bottom:15px;z-index:2}
+.b22{left:360px}
+.b11:hover+.b21,.b12:hover+.b22{opacity:1;visibility:visible}
+.green:hover{background:#00833c;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="block green b11">Блок 1.1</div>
+  <div class="block blue b21">Текст всередині Блоку 2.1</div>
+  <div class="block green b12">Блок 1.2</div>
+  <div class="block blue b22">Текст всередині Блоку 2.2</div>
+</div></body></html>
