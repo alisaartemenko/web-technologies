@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weather – New York, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--text:#444;--muted:#888;--line:#ccc;--font:"Roboto",Arial,sans-serif;--pad:24px}
+body{font:300 18px/1.4 var(--font);color:var(--text);background:#fff}
+.app{max-width:700px;margin:0 auto;padding:24px var(--pad)}
+h1{font-weight:300;font-size:clamp(36px,9vw,64px);line-height:1.1}
+.date{color:var(--muted);margin-top:8px}
+.now{display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px;margin:8px 0 24px}
+.now-main{display:flex;align-items:center;gap:8px}
+.now-main svg{width:96px;height:96px}
+.temp{font-size:56px}
+.temp sup{font-size:18px;color:var(--muted)}
+.details{color:var(--muted);font-size:16px;line-height:1.5}
+.details b{font-weight:400;color:var(--text)}
+.days{list-style:none;border-top:1px solid var(--line)}
+.day{display:flex;align-items:center;gap:8px;padding:16px 0;border-bottom:1px solid var(--line)}
+.day>*{flex:1 1 0}
+.day-name{font-weight:700}
+.day svg{flex:0 0 72px;max-width:72px;height:72px}
+.hi{color:var(--text)}.lo{color:var(--muted)}
+.pollen{color:var(--muted)}.pollen b{font-weight:400;color:var(--text)}
+@media (max-width:480px){.pollen{display:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="sun" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="#ffe066"/></symbol>
+<symbol id="cloud" viewBox="0 0 64 64"><path d="M14 46a9 9 0 0 1 3-17 13 13 0 0 1 25-2 9 9 0 0 1 8 19z" fill="#d6d6d6"/></symbol>
+<symbol id="drops" viewBox="0 0 64 64"><path d="M16 50l4-8M26 52l4-8" stroke="#3bb4e0" stroke-width="4" stroke-linecap="round"/></symbol>
+<symbol id="bolt" viewBox="0 0 64 64"><path d="M46 28l-8 14h7l-6 14 14-18h-8l6-10z" fill="#ffe066"/></symbol>
+</svg>
+<main class="app">
+  <header>
+    <h1>New York, NY</h1>
+    <p class="date">Tuesday, April 15th<br>Overcast</p>
+    <div class="now">
+      <div class="now-main"><svg viewBox="0 0 64 64" role="img" aria-label="Overcast"><use href="#cloud"/></svg><span class="temp">58<sup>°F</sup></span></div>
+      <p class="details">Precipitation: <b>100%</b><br>Humidity: <b>97%</b><br>Wind: <b>4 mph SW</b><br>Pollen Count: <b>36</b></p>
+    </div>
+  </header>
+  <ul class="days" id="days"></ul>
+</main>
+<script>
+const ICONS={
+  storm:'<use href="#cloud"/><use href="#drops"/><use href="#bolt"/>',
+  sun:'<use href="#sun" x="4" y="4" width="56" height="56"/>',
+  partly:'<use href="#sun" x="22" y="6" width="38" height="38"/><use href="#cloud" y="6"/>',
+  rain:'<use href="#cloud"/><use href="#drops"/>'
+};
+// n днів: додайте або видаліть об'єкти — розмітка згенерується сама
+const DAYS=[
+  {d:"Today",i:"storm",hi:68,lo:36,p:36},{d:"Wednesday",i:"sun",hi:50,lo:39,p:36},
+  {d:"Thursday",i:"sun",hi:55,lo:39,p:36},{d:"Friday",i:"partly",hi:54,lo:43,p:36},
+  {d:"Saturday",i:"rain",hi:64,lo:46,p:36},{d:"Sunday",i:"rain",hi:64,lo:50,p:36},
+  {d:"Monday",i:"partly",hi:61,lo:50,p:36}
+];
+document.getElementById("days").innerHTML=DAYS.map(x=>`<li class="day"><span class="day-name">${x.d}</span><svg viewBox="0 0 64 64" role="img" aria-label="${x.i}">${ICONS[x.i]}</svg><span><span class="hi">${x.hi}°</span><br><span class="lo">${x.lo}°</span></span><span class="pollen">Pollen <b>${x.p}</b></span></li>`).join("");
+</script>
+</body>
+</html>
