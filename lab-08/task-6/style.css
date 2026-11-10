@@ -1,0 +1,63 @@
+.tree {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-1);
+  counter-reset: block;
+}
+
+.tree__block {
+  display: grid;
+  place-items: center;
+  min-height: 3.5rem;
+  font-family: Georgia, serif;
+  font-size: 1.75rem;
+  color: var(--color-surface);
+  background-color: var(--color-yellow);
+}
+
+.tree__block::before {
+  counter-increment: block;
+  content: counter(block);
+}
+
+.tree__block:nth-child(1) {
+  grid-column: span 12;
+}
+
+.tree__block:nth-child(n + 2):nth-child(-n + 3) {
+  grid-column: span 6;
+}
+
+.tree__block:nth-child(n + 4):nth-child(-n + 6) {
+  grid-column: span 4;
+}
+
+.tree__block:nth-child(n + 7):nth-child(-n + 10) {
+  grid-column: span 3;
+}
+
+.tree__block:nth-child(n + 11):nth-child(-n + 16) {
+  grid-column: span 2;
+}
+
+.tree__block:nth-child(n + 17) {
+  grid-column: span 1;
+}
+
+@media (max-width: 768px) {
+  .tree__block {
+    min-height: 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .tree {
+    gap: 0.25rem;
+  }
+
+  .tree__block {
+    min-height: 2.25rem;
+    font-size: 0.85rem;
+  }
+}
